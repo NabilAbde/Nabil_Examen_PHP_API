@@ -57,7 +57,7 @@ class Film
             endswitch;
         }
     }
-    public function detailProduct($id)
+    public function detailFilm($id)
     {
 
         $servername = 'localhost';
@@ -73,8 +73,8 @@ class Film
 
             $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT * FROM film WHERE idFilm = $id";
-            $Product = $dbc->query($sql)->fetchObject();
+            $sql = "SELECT * FROM film WHERE idfilm = $id";
+            $Film = $dbc->query($sql)->fetchObject();
 
             return $Film;
         } catch (PDOException $e) {
@@ -93,7 +93,4 @@ class Film
             endswitch;
         }
     }
-
-
-
 }

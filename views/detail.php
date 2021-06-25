@@ -1,5 +1,6 @@
 <?php
 require_once('controllers/detail.php');
+//var_dump($dFilms);
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +14,11 @@ require_once('controllers/detail.php');
 </head>
 
 <body>
-    <h1><?php echo $dFilms->title; ?></h1>
-    <h1><?php echo $dFilms->idCategoy; ?></h1>
-    <p><?php echo $dFilms->description; ?></p>
-    <p><?php echo $dFilms->Year; ?></p>
-    <p><?php echo $dFilms->image; ?></p>
+    <h1>Film : <?php echo $dFilms->title; ?></h1>
+    <h1>Catégorie<?php echo $dFilms->idCategory; ?></h1>
+    <p>Resumé :<?php echo $dFilms->resume; ?></p>
+    <p>Année de sortie :<?php echo $dFilms->Year; ?></p>
+    <p>Affiche : <?php echo $dFilms->image; ?></p>
 </body>
 
 </html>
