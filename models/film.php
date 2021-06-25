@@ -107,9 +107,9 @@ class Film
 
 
             $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO product (idCategory,title, resume) VALUES ('$idCategory','$title', '$resume)";
+            $sql = "INSERT INTO film (idCategory,title, resume) VALUES ('$idCategory','$title', '$resume)";
             $stmt = $dbc->prepare($sql);
-            $stmt->execute([$idCategory','$title', '$resume]);
+            $stmt->execute(['$idCategory','$title', '$resume]);
         } catch (PDOException $e) {
 
 
