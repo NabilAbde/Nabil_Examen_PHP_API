@@ -1,0 +1,40 @@
+Partie 1 :
+1/ Un block try and catch sert a tester dans la partie TRY le code a executer 
+pouvant provoquer une erreur ou une exception et cette erreur ou exception est gerer dans le catch (exception $e)
+
+ Ces blocs ne servent pas qu a cela on peut aussi creer une exception pour une meilleure gestion avec par exemple throw nex Exception('Message', code erreur) afin d avoir une bonne lisibilite des codes erreurs.
+
+2/PDO est fourni par PHP et  signifie PHP Data Objects (PDO) et sert à  accéder à une base de données depuis PHP. 
+Il est oriente objet et necessite des requetes preparees.
+
+3/Les requetes preparées sont sorte de modèle compilé pour le SQL que l on veut executer  utilisant des variables en guise de paramètres.
+
+Elles permettent d'évitez de répéter le cycle analyse/compilation/optimisation qui est consommateur de ressources.
+
+4/ Avantages a fournir une Api :
+Elle permet au client d'acceder à des informations de tout type (Meteo, bourse...) et rendre le site plus qualitatif dans l experience utilisateur
+Elle permet au fournisseur de l api de gerer tres facilement les informations (creation, lecture,modification,suppression)
+
+5/Avantages à utiliser une API :
+On peut recupere tres facilement une liste produit, un produit detaille etc...
+n peut fournir par exemple sur un site ecommerce la possibilite de faire un tunnel de vente pour les paniers qui ne se transforment pas en commande (on centralise
+via un email avec sending blue ou mail chimp
+
+Elle permet de pouvoir interagir avec un système sans se soucier de sa complexité et de son fonctionnement. 
+Plus besoin de comprendre les systèmes très complexe  accéder à ses informations. 
+On lui donne les paramètres d’entrée adéquates et elle nous renvoie les informations voulues comme une fonction.
+
+Une API permet également de facilement mettre à disposition à des tiers, des fonctionnalités sans ouvrir l’accès aux systèmes sources. 
+
+
+
+
+
+
+
+
+
+
+
+
+
