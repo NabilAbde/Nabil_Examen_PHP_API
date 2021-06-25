@@ -92,5 +92,75 @@ class Film
                     break;
             endswitch;
         }
+    }public function AddFilm($idCategory, $title, $resume)
+    {
+
+        $servername = 'localhost';
+        $username = 'root';
+        $password = '';
+
+
+
+        try {
+            $dbc = new PDO("mysql:host=$servername;dbname=netfloo", $username, $password);
+            echo "Connexion à la BDD établie";
+
+
+            $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "INSERT INTO product (idCategory,title, resume) VALUES ('$idCategory','$title', '$resume)";
+            $stmt = $dbc->prepare($sql);
+            $stmt->execute([$idCategory','$title', '$resume]);
+        } catch (PDOException $e) {
+
+
+            switch ($e->getCode()):
+                case 2002:
+                    echo "Erreur de connexion à la base de données";
+                    break;
+                case 'HY000':
+                    echo "Attention la BDD existe déjà";
+                    break;
+                default:
+                    echo $e->getCode();
+                    break;
+            endswitch;
+        }
     }
+
+    public function Delete($id)
+    {
+        $servername = 'localhost';
+        $bddname = "shoptoncafe";
+        $username = 'root';
+        $password = '';
+
+
+
+        try {
+            $dbc = new PDO("mysql:host=$servername;dbname=$bddname", $username, $password);
+            echo "Connexion à la BDD établie";
+
+            $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = "DELETE FROM product WHERE idProduct = $id";
+            $stmt = $dbc->query($sql)->fetch();
+            //$stmt->exec($sql);
+        } catch (PDOException $e) {
+
+
+            switch ($e->getCode()):
+                case 2002:
+                    echo "Erreur de connexion à la base de données";
+                    break;
+                case 'HY000':
+                    echo "Attention la BDD existe déjà";
+                    break;
+                default:
+                    echo $e->getCode();
+                    break;
+            endswitch;
+        }
+    }
+}
+
 }
